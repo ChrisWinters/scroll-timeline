@@ -1,0 +1,119 @@
+html, body {
+  margin: 0;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  height: 60vh;
+}
+.hero > .background {
+  width: 100%;
+  height: 130%;
+  background-size: cover;
+  background-image: url("../images/winter.jpg");
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+section {
+  opacity: 0;
+  transition: opacity 250ms ease-in;
+}
+section.fade-in {
+  opacity: 1;
+}
+
+.hero-title {
+  position: absolute;
+  transform: translateY(-50%);
+  width: 100%;
+  z-index: 1000;
+}
+
+.title {
+  background: #cccccc;
+  margin: 0 auto;
+  padding: 15px;
+  width: 80%;
+}
+.title h1 {
+  color: #000000;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.section {
+  background: #cacaca;
+  color: #000000;
+  padding: 16px 0;
+  text-align: center;
+}
+
+.circle {
+  height: 200px;
+  width: 200px;
+}
+.circle.circle-outer-border {
+  background: #ffffff;
+  position: relative;
+  border: 1px solid #000000;
+  border-radius: 100px;
+  -moz-border-radius: 100px;
+  -webkit-border-radius: 100px;
+  overflow: hidden;
+}
+.circle .circle-fill {
+  background-color: #147fc3;
+  height: 200px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 200px;
+}
+.circle .circle-fill.fill-in {
+  -webkit-animation: fillerup 1s normal forwards ease-in-out;
+  animation: fillerup 1s normal forwards ease-in-out;
+}
+
+.inner-circle {
+  background: #cacaca;
+  border: 1px solid #000000;
+  border-radius: 100px;
+  -moz-border-radius: 100px;
+  -webkit-border-radius: 100px;
+  color: white;
+  font-size: 32px;
+  padding: 58px;
+  position: relative;
+  top: 42%;
+  z-index: 1;
+}
+
+.animate-number {
+  opacity: 0;
+  transition: opacity 250ms ease-in;
+}
+.animate-number.fade-in {
+  opacity: 1;
+}
+
+@-webkit-keyframes fillerup {
+  0% {
+    top: 100%;
+  }
+  100% {
+    top: 100%;
+  }
+}
+@keyframes fillerup {
+  0% {
+    top: 100%;
+  }
+  100% {
+    top: 100%;
+  }
+}
